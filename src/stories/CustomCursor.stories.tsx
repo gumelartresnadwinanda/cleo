@@ -1,6 +1,6 @@
-import CustomCursor from './CustomCursor';
+import CustomCursor from '../components/cursor/CustomCursor';
 
-export const Default = () => (
+export const Standard = () => (
     <div style={{ height: '80vh', background: '#111'}}>
         <p style={{ color: 'white', textAlign: 'center', paddingTop: '40vh', fontSize: '25px'}}>
             Move your mouse around to see the custom cursor.
@@ -12,7 +12,7 @@ export const Default = () => (
 import type { Meta } from '@storybook/react-vite';
 
 const meta = {
-  title: 'Example/Custom Cursor',
+  title: 'Cursor/Custom Cursor',
   component: CustomCursor,
 } satisfies Meta<typeof CustomCursor>;
 
