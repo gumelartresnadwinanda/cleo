@@ -1,5 +1,6 @@
 import CustomCursor from '../components/cursor/CustomCursor';
 
+// TODO: handle styling
 export const Standard = () => (
     <div style={{ height: '80vh', background: '#111'}}>
         <p style={{ color: 'white', textAlign: 'center', paddingTop: '40vh', fontSize: '25px'}}>

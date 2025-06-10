@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 
+// TODO: manage styling
 const CustomCursor: React.FC = () => {
   const cursorRef = useRef<HTMLDivElement>(null);
 
