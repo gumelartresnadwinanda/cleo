@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
+import './CustomCursor.css';
 
-// TODO: manage styling
 const CustomCursor: React.FC = () => {
   const cursorRef = useRef<HTMLDivElement>(null);
 
@@ -16,24 +16,7 @@ const CustomCursor: React.FC = () => {
   }, []);
 
   return (
-    <div
-      ref={cursorRef}
-      style={{
-        boxShadow: '0 0 20px 10px rgba(255, 255, 255, 0.3)',
-        transition: 'transform 0.1s ease-out',
-        willChange: 'transform',
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        width: '2.5rem',
-        height: '2.5rem',
-        borderRadius: '50%',
-        backgroundColor: 'white',
-        mixBlendMode: 'difference',
-        pointerEvents: 'none',
-        zIndex: 50,
-      }}
-    />
+    <div ref={cursorRef} className="custom-cursor" />
   );
 };
 
