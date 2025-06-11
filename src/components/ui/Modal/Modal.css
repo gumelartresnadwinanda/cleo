@@ -1,0 +1,178 @@
+.cleo-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 1rem;
+}
+
+.cleo-modal {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  animation: slideIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  max-height: calc(100vh - 2rem);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Sizes */
+.cleo-modal--sm {
+  max-width: 24rem;
+}
+
+.cleo-modal--md {
+  max-width: 32rem;
+}
+
+.cleo-modal--lg {
+  max-width: 48rem;
+}
+
+.cleo-modal--xl {
+  max-width: 64rem;
+}
+
+.cleo-modal--full {
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.cleo-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: #f9fafb;
+}
+
+.cleo-modal__title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  line-height: 1.5;
+}
+
+.cleo-modal__close-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: #6b7280;
+  border-radius: 0.5rem;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+}
+
+.cleo-modal__close-button:hover {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.cleo-modal__close-button:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.cleo-modal__content {
+  padding: 1.5rem;
+  overflow-y: auto;
+  flex: 1;
+  background-color: white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-1rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .cleo-modal-overlay {
+    padding: 0.5rem;
+  }
+
+  .cleo-modal {
+    max-height: calc(100vh - 1rem);
+  }
+
+  .cleo-modal--sm,
+  .cleo-modal--md,
+  .cleo-modal--lg,
+  .cleo-modal--xl {
+    max-width: 100%;
+  }
+
+  .cleo-modal__header {
+    padding: 1rem;
+  }
+
+  .cleo-modal__content {
+    padding: 1rem;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .cleo-modal {
+    background-color: #1f2937;
+  }
+
+  .cleo-modal__header {
+    background-color: #111827;
+    border-bottom-color: #374151;
+  }
+
+  .cleo-modal__title {
+    color: #f9fafb;
+  }
+
+  .cleo-modal__close-button {
+    color: #9ca3af;
+  }
+
+  .cleo-modal__close-button:hover {
+    background-color: #374151;
+    color: #f9fafb;
+  }
+
+  .cleo-modal__content {
+    background-color: #1f2937;
+    color: #f3f4f6;
+  }
+} 

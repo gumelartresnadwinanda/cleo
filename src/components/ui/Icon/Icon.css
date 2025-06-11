@@ -1,0 +1,62 @@
+.cleo-icon {
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cleo-icon--sm {
+  width: 1rem;
+  height: 1rem;
+  stroke-width: 2;
+}
+
+.cleo-icon--md {
+  width: 1.25rem;
+  height: 1.25rem;
+  stroke-width: 1.75;
+}
+
+.cleo-icon--lg {
+  width: 1.5rem;
+  height: 1.5rem;
+  stroke-width: 1.5;
+}
+
+/* Animation variants */
+.cleo-icon--spin {
+  animation: spin 1s linear infinite;
+}
+
+.cleo-icon--pulse {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .cleo-icon {
+    color: #f3f4f6;
+  }
+} 

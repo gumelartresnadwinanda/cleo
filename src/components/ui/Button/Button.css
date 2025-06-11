@@ -1,0 +1,174 @@
+.cleo-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  position: relative;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Sizes */
+.cleo-button--sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  min-height: 2rem;
+}
+
+.cleo-button--md {
+  padding: 0.625rem 1.25rem;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  min-height: 2.5rem;
+}
+
+.cleo-button--lg {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  line-height: 1.75rem;
+  min-height: 3rem;
+}
+
+/* Variants */
+.cleo-button--primary {
+  background-color: #3b82f6;
+  color: white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.cleo-button--primary:hover {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.cleo-button--primary:active {
+  background-color: #1d4ed8;
+  transform: translateY(0);
+}
+
+.cleo-button--secondary {
+  background-color: #6b7280;
+  color: white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.cleo-button--secondary:hover {
+  background-color: #4b5563;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.cleo-button--secondary:active {
+  background-color: #374151;
+  transform: translateY(0);
+}
+
+.cleo-button--outlined {
+  background-color: transparent;
+  border: 1.5px solid #3b82f6;
+  color: #3b82f6;
+}
+
+.cleo-button--outlined:hover {
+  background-color: rgba(59, 130, 246, 0.05);
+  transform: translateY(-1px);
+}
+
+.cleo-button--outlined:active {
+  background-color: rgba(59, 130, 246, 0.1);
+  transform: translateY(0);
+}
+
+.cleo-button--ghost {
+  background-color: transparent;
+  color: #3b82f6;
+}
+
+.cleo-button--ghost:hover {
+  background-color: rgba(59, 130, 246, 0.05);
+  transform: translateY(-1px);
+}
+
+.cleo-button--ghost:active {
+  background-color: rgba(59, 130, 246, 0.1);
+  transform: translateY(0);
+}
+
+/* States */
+.cleo-button--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.cleo-button--loading {
+  cursor: wait;
+  pointer-events: none;
+}
+
+.cleo-button--full-width {
+  width: 100%;
+}
+
+/* Loader */
+.cleo-button__loader {
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Icons */
+.cleo-button__left-icon,
+.cleo-button__right-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Focus styles */
+.cleo-button:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .cleo-button--outlined {
+    border-color: #60a5fa;
+    color: #60a5fa;
+  }
+
+  .cleo-button--outlined:hover {
+    background-color: rgba(96, 165, 250, 0.1);
+  }
+
+  .cleo-button--ghost {
+    color: #60a5fa;
+  }
+
+  .cleo-button--ghost:hover {
+    background-color: rgba(96, 165, 250, 0.1);
+  }
+} 
