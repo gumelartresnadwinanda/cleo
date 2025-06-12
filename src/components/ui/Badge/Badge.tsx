@@ -50,7 +50,6 @@ const Badge: React.FC<BadgeProps> = ({
   size = 'md',
   rounded = false,
   outlined = false,
-  filled = true,
   className = '',
   dot = false,
   count,
