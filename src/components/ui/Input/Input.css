@@ -26,7 +26,7 @@
   width: 100%;
   border-radius: 0.5rem;
   border: 1.5px solid #e5e7eb;
-  background-color: white;
+  background-color: #ffffff;
   color: #1f2937;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   outline: none;
@@ -72,7 +72,7 @@
 /* Variants */
 .cleo-input--outlined {
   border: 1.5px solid #e5e7eb;
-  background-color: white;
+  background-color: #ffffff;
 }
 
 .cleo-input--filled {
@@ -85,17 +85,17 @@
 }
 
 .cleo-input--filled:focus {
-  background-color: white;
+  background-color: #ffffff;
   border: 1.5px solid #3b82f6;
 }
 
 .cleo-input--flushed {
   border: none;
-  border-bottom: 1.5px solid #e5e7eb;
+  border-bottom: 2px solid #e5e7eb;
   border-radius: 0;
-  padding-left: 0;
-  padding-right: 0;
+  padding: 0.5rem 0;
   background-color: transparent;
+  color: #1f2937;
 }
 
 .cleo-input--flushed:hover:not(:disabled) {
@@ -104,7 +104,12 @@
 
 .cleo-input--flushed:focus {
   border-color: #3b82f6;
-  box-shadow: none;
+  background-color: transparent;
+  color: #1f2937;
+}
+
+.cleo-input--flushed::placeholder {
+  color: #9ca3af;
 }
 
 /* States */
@@ -165,20 +170,26 @@
 @media (prefers-color-scheme: dark) {
   .cleo-input {
     background-color: #1f2937;
-    border-color: #374151;
+    border-color: #4b5563;
     color: #f3f4f6;
   }
 
   .cleo-input::placeholder {
-    color: #6b7280;
+    color: #9ca3af;
   }
 
   .cleo-input:hover:not(:disabled) {
+    border-color: #6b7280;
+  }
+
+  .cleo-input--outlined {
+    background-color: #1f2937;
     border-color: #4b5563;
   }
 
   .cleo-input--filled {
     background-color: #374151;
+    border: none;
   }
 
   .cleo-input--filled:hover:not(:disabled) {
@@ -187,17 +198,27 @@
 
   .cleo-input--filled:focus {
     background-color: #1f2937;
+    border: 1.5px solid #60a5fa;
   }
 
   .cleo-input--flushed {
-    border-color: #374151;
+    border-color: #4b5563;
+    background-color: transparent;
   }
 
   .cleo-input--flushed:hover:not(:disabled) {
-    border-color: #4b5563;
+    border-color: #6b7280;
   }
 
   .cleo-input--disabled {
     background-color: #374151;
+  }
+
+  .cleo-input__label {
+    color: #e5e7eb;
+  }
+
+  .cleo-input__helper-text {
+    color: #9ca3af;
   }
 } 

@@ -87,13 +87,6 @@ export const Large: Story = {
   },
 };
 
-export const Filled: Story = {
-  args: {
-    ...Default.args,
-    variant: 'filled',
-  },
-};
-
 export const Flushed: Story = {
   args: {
     ...Default.args,

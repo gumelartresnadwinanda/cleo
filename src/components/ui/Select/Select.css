@@ -26,7 +26,7 @@
   width: 100%;
   border-radius: 0.5rem;
   border: 1.5px solid #e5e7eb;
-  background-color: white;
+  background-color: #ffffff;
   color: #1f2937;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   outline: none;
@@ -73,7 +73,7 @@
 /* Variants */
 .cleo-select--outlined {
   border: 1.5px solid #e5e7eb;
-  background-color: white;
+  background-color: #ffffff;
 }
 
 .cleo-select--filled {
@@ -86,16 +86,15 @@
 }
 
 .cleo-select--filled:focus {
-  background-color: white;
+  background-color: #ffffff;
   border: 1.5px solid #3b82f6;
 }
 
 .cleo-select--flushed {
   border: none;
-  border-bottom: 1.5px solid #e5e7eb;
+  border-bottom: 2px solid #e5e7eb;
   border-radius: 0;
-  padding-left: 0;
-  padding-right: 0;
+  padding: 0.5rem 0;
   background-color: transparent;
 }
 
@@ -105,7 +104,6 @@
 
 .cleo-select--flushed:focus {
   border-color: #3b82f6;
-  box-shadow: none;
 }
 
 /* States */
@@ -167,7 +165,7 @@
   left: 0;
   right: 0;
   margin-top: 0.25rem;
-  background-color: white;
+  background-color: #ffffff;
   border: 1px solid #e5e7eb;
   border-radius: 0.5rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
@@ -232,16 +230,22 @@
 @media (prefers-color-scheme: dark) {
   .cleo-select {
     background-color: #1f2937;
-    border-color: #374151;
+    border-color: #4b5563;
     color: #f3f4f6;
   }
 
   .cleo-select:hover:not(:disabled) {
+    border-color: #6b7280;
+  }
+
+  .cleo-select--outlined {
+    background-color: #1f2937;
     border-color: #4b5563;
   }
 
   .cleo-select--filled {
     background-color: #374151;
+    border: none;
   }
 
   .cleo-select--filled:hover:not(:disabled) {
@@ -250,23 +254,33 @@
 
   .cleo-select--filled:focus {
     background-color: #1f2937;
+    border: 1.5px solid #60a5fa;
   }
 
   .cleo-select--flushed {
-    border-color: #374151;
+    border-color: #4b5563;
+    background-color: transparent;
   }
 
   .cleo-select--flushed:hover:not(:disabled) {
-    border-color: #4b5563;
+    border-color: #6b7280;
   }
 
   .cleo-select--disabled {
     background-color: #374151;
   }
 
+  .cleo-select__label {
+    color: #e5e7eb;
+  }
+
+  .cleo-select__helper-text {
+    color: #9ca3af;
+  }
+
   .cleo-select__options {
     background-color: #1f2937;
-    border-color: #374151;
+    border-color: #4b5563;
   }
 
   .cleo-select__option {
@@ -279,10 +293,14 @@
 
   .cleo-select__option--disabled {
     color: #6b7280;
-    background-color: #111827;
+    background-color: #1f2937;
   }
 
   .cleo-select__option--disabled:hover {
-    background-color: #111827;
+    background-color: #1f2937;
+  }
+
+  .cleo-select__arrow {
+    color: #9ca3af;
   }
 } 
