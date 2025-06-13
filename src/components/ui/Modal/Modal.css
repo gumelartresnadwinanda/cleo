@@ -146,33 +146,3 @@
     padding: 1rem;
   }
 }
-
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-  .cleo-modal {
-    background-color: #1f2937;
-  }
-
-  .cleo-modal__header {
-    background-color: #111827;
-    border-bottom-color: #374151;
-  }
-
-  .cleo-modal__title {
-    color: #f9fafb;
-  }
-
-  .cleo-modal__close-button {
-    color: #9ca3af;
-  }
-
-  .cleo-modal__close-button:hover {
-    background-color: #374151;
-    color: #f9fafb;
-  }
-
-  .cleo-modal__content {
-    background-color: #1f2937;
-    color: #f3f4f6;
-  }
-} 

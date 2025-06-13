@@ -220,23 +220,3 @@
   outline: 2px solid #3b82f6;
   outline-offset: 2px;
 }
-
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-  .cleo-button--outlined {
-    border-color: #60a5fa;
-    color: #60a5fa;
-  }
-
-  .cleo-button--outlined:hover {
-    background-color: rgba(96, 165, 250, 0.1);
-  }
-
-  .cleo-button--ghost {
-    color: #60a5fa;
-  }
-
-  .cleo-button--ghost:hover {
-    background-color: rgba(96, 165, 250, 0.1);
-  }
-} 
